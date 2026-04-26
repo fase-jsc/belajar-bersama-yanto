@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Neon Learning</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOADING -->
+<div id="loadingScreen">
+  <div class="loader"></div>
+  <p>Loading...</p>
+</div>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <h2 class="logo">⚡ BELAJAR BERSAMA YANTO</h2>
+  <button onclick="showSection('materi')">📚 Materi</button>
+</div>
+
+<!-- MATERI -->
+<div id="materi" class="section active">
+  <div class="card">
+    <h2>Narrative</h2>
+    <p>Story text (Once upon a time i see yanto darkend him self)</p>
+  </div>
+
+  <div class="card">
+    <h2>Descriptive</h2>
+    <p>Describe something like yanto so n**gga</p>
+  </div>
+
+  <div class="card">
+    <h2>Procedure</h2>
+    <p>Steps/how to do something like how to have misis like juned</p>
+  </div>
+
+  <div style="text-align:center;">
+    <button onclick="showSection('quiz')">🧠 tekan untuk perang</button>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<div id="quiz" class="section">
+  <div class="card">
+
+    <h3 id="level"></h3>
+    <div id="timer"></div>
+
+    <!-- PROGRESS BAR -->
+    <div id="progressContainer">
+      <div id="progressBar"></div>
+    </div>
+
+    <h3 id="question"></h3>
+    <div id="options"></div>
+
+    <div style="display:flex; justify-content:space-between; margin-top:10px;">
+      <button id="nextBtn" onclick="nextQuestion()">lanjut</button>
+      <button id="nextLevelBtn" style="display:none;" onclick="goNextLevel()">➡ level selanjutnya</button>
+    </div>
+
+    <div id="result"></div>
+    <div id="analysis"></div>
+
+    <canvas id="chart" width="320" height="200"></canvas>
+    <canvas id="progressChart" width="320" height="200"></canvas>
+
+  </div>
+</div>
+
+<div id="resultPopup" class="popup hidden">
+  <div class="popup-card">
+
+    <h2 id="popupTitle">HASIL</h2>
+    <p id="popupScore"></p>
+    <p id="popupMessage"></p>
+
+    <div class="popup-buttons">
+      <button onclick="restart()">🔁 Ulang</button>
+      <button id="popupNextBtn" onclick="goNextLevel()" style="display:none;">
+        ➡ level selanjutnya
+      </button>
+      <button id="restartAllBtn" onclick="restartAll()" style="display:none;">
+        🔄 Kembali ke awal level
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id="secretPopup" class="popup hidden">
+  <div class="popup-card">
+
+    <h2>🔒 SECRET UNLOCKED</h2>
+    <p>ternyata kamu pintar aku tidak nyangka</p>
+
+    <button onclick="openSecret()">✨ buka hadiah</button>
+
+  </div>
+</div>
+
+<div id="secretPage" class="section">
+  <div class="card">
+    <h2>🎉 PESAN HADIAH</h2>
+    <p>Your IQ must be above yanto</p>
+  </div>
+</div>
+
+<div class="watermark">Made by Fase</div>
+<div class="subWatermark">FANCORE3 CORPORATION</div>
+
+<script src="script.js"></script>
+</body>
+</html>
